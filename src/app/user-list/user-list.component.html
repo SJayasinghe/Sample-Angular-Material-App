@@ -1,0 +1,52 @@
+
+<!-- <mat-list>
+      <mat-list-item *ngFor="let user of listUsers"> 
+        <li>ID : {{ user.id }}</li>
+        <li>Email : {{ user.email }}</li>
+        <li>First Name : {{ user.first_name }}</li>
+        <li>Last Name : {{ user.last_name }}</li>
+        <iframe>{{user.avatar}}</iframe>
+        <a routerLink = "['edit', user.id]">Edit</a>
+    </mat-list-item>
+</mat-list> -->
+<div class="example-container mat-elevation-z8">
+<mat-table [dataSource]="listUsers">
+    <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.id}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.email}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="first_name">
+        <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.first_name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="last_name">
+        <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+        <mat-cell *matCellDef="let user"> {{user.last_name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="avatar">
+        <mat-header-cell *matHeaderCellDef> Avatar </mat-header-cell>
+        <mat-cell *matCellDef="let user"> <img src="{{user.avatar}}" /></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="edit">
+        <mat-header-cell  *matHeaderCellDef > Edit </mat-header-cell>
+        <mat-cell *matCellDef="let row" >
+             <button mat-raised-button color="primary" >Edit</button>
+        </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+        <mat-header-cell  *matHeaderCellDef > Delete </mat-header-cell>
+        <mat-cell *matCellDef="let row" >
+             <button mat-raised-button color="warn">Delete</button>
+        </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>    
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</mat-table>
+
+</div>
