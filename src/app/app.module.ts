@@ -9,6 +9,7 @@ import { UserService } from './services/user.service';
 import {MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserListComponent } from './user-list/user-list.component';
 
  
 
@@ -16,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     UserRegistrationComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import {MatDatepickerModule} from  '@angular/material/datepicker';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -25,7 +27,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatListModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule
+    
     
   ],
   exports: [
@@ -37,7 +42,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatListModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule
     
 
   ]

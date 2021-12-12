@@ -16,9 +16,9 @@ export class UserService {
     return this.http.post(this.rootURL + 'api/users', {user});
   }
 
-  // getUsers() {
-  //   return this.http.get(this.rootURL + '/users?page=2');
-  // }
+  getUsers() {
+    return this.http.get(this.rootURL + 'api/users');
+  }
 
   // create(user: any): Observable<any> {
   //   return this.http.post(this.rootURL + '/users', {user});
