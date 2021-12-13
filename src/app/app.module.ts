@@ -10,6 +10,8 @@ import {MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserListComponent } from './user-list/user-list.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
  
 
@@ -18,6 +20,8 @@ import { UserListComponent } from './user-list/user-list.component';
     AppComponent,
     UserRegistrationComponent,
     UserListComponent,
+    UpdateUserComponent,
+    DeleteUserComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,9 +13,6 @@ export class UserListComponent implements OnInit {
 
   listUsers: any;
   displayedColumns = ['id', 'email', 'first_name', 'last_name', 'avatar', 'edit' , 'delete'];
- 
-  // displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  // dataSource = new MatTableDataSource<Element>();
 
   // @ViewChild(MatPaginator) paginator: MatPaginator; 
   
