@@ -20,6 +20,18 @@ export class UserService {
     return this.http.get(this.rootURL + 'api/users');
   }
 
+  getUser(id : any) {
+    return this.http.get(this.rootURL + `api/users/${id}`);
+  }
+
+  updateUser(user : any , id : any) {
+    return this.http.put(this.rootURL + `api/users/${id}`, {user});
+  }
+
+  deleteUser(id : any) {
+    return this.http.delete(this.rootURL + `api/users/${id}`);
+  }
+
   // create(user: any): Observable<any> {
   //   return this.http.post(this.rootURL + '/users', {user});
   // }
