@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user-registration',
@@ -11,7 +12,9 @@ export class UserRegistrationComponent implements OnInit {
 
   addUserForm : FormGroup = new FormGroup({});
 
-  constructor(private service : UserService,private fromBuilder : FormBuilder) { }
+  constructor(private service : UserService,
+    private fromBuilder : FormBuilder ,
+    private _snackBar : MatSnackBar ) { }
 
   ngOnInit(): void {
     this.addUserForm = this.fromBuilder.group({
@@ -23,10 +26,11 @@ export class UserRegistrationComponent implements OnInit {
 
   createUser(){ 
     this.service.addUser(this.addUserForm.value).subscribe(data =>{
-      console.log('User Created');
+      this._snackBar.open("user added successfully");
       console.log(this.addUserForm.value);
     },err => {
       console.log(err);
+      this._snackBar.open("unable to add user");
     })
   }
 
